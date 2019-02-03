@@ -42,7 +42,7 @@ data Tree a = Leaf a
 
 However, one may wonder if a more general solution exists. That is, if it is possible to provide a definition of `Tree` that permits internal nodes of arbitrary structures without the need of explicitly encoding them in the definition of the data type.
 
-As an example, we might be interested in internal nodes with either one, two or three child nodes. Let us enumerate these three alternatives in a dedicated data type, which we parameterize on the type of its child nodes.
+As an example, we might be interested in internal nodes with either one, two or three child nodes. Let us enumerate these three alternatives in a dedicated data type, which we parameterize on the type of its child nodes:
 
 ```haskell
 data Node e = Unary e | Binary e e | Ternary e e e
