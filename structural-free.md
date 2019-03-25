@@ -19,7 +19,7 @@ instance Monad Tree where
   (Branch l r) >>= g = Branch (l >>= g) (r >>= g)
 ```
 
-According to the above, `(>>=)` replaces each leaf node with whatever tree the function `g` returns. That is, `(>>=`) implements adjoining between trees. As an example, we can duplicate each leaf node by means of the `duplicateLeaf` function:
+According to the above, `(>>=)` replaces each leaf node with whatever tree the function `g` returns. That is, `(>>=)` implements adjoining between trees. As an example, we can duplicate each leaf node by means of the `duplicateLeaf` function:
 
 ```haskell
 duplicateLeaf :: a -> Tree a
