@@ -85,7 +85,7 @@ t2 :: Tree Node Integer
 t2 = Branch (Binary (Branch (Unary (Leaf 7))) (Leaf 8))
 ```
 
-As shown, both `t1` and `t2` are trees whose internal nodes are determined by `Node`, and whose leafs retain a value of type `Integer`.
+As shown, both `t1` and `t2` are trees whose internal nodes are determined by `Node`, and whose leaves retain a value of type `Integer`.
 
 ## Recovering monadic facilities
 The changes we implemented in `Tree` call for changes also in the corresponding `Monad` instance. For convenience, let us repeat the original definition:
