@@ -119,7 +119,7 @@ instance Functor Node where
   fmap f (Ternary e1 e2 e3) = Ternary (f e1) (f e2) (f e3)
 ```
 
-Moving the mapping operation within the type functor `f` (e.g., `Node` ) should appear natural, as it is where we confined the explicit knowledge on the shape of the internal nodes. The intricacy of the mapping is hidden from the calling site by means of `fmap`.
+Moving the mapping operation within the type constructor `f` (e.g., `Node` ) should appear natural, as it is where we confined the explicit knowledge on the shape of the internal nodes. The intricacy of the mapping is hidden from the calling site by means of `fmap`.
 
 The instance we just introduced is so immediate that GHC can automatically derive it for us, without further interventions.
 
