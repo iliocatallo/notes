@@ -33,7 +33,7 @@ In the spirit of OOP, other objects — like `b` in Figure 2, can ask `a` to pro
 </div>
 <br/>
 
-When reaching out for help, `b` is not particularly interested in the identity of his counterpart if he can still obtain the service he needs by way of the same message exchange. That is, `b` does not care about who he's talking to as long as whoever is at the other side of the conversation can still play the _role_ `b` expects of him (see Figure 3).
+When reaching out for help, `b` is not particularly interested in the identity of his counterpart if he can still obtain the service he needs by way of the same message exchange. That is, `b` does not care about who he's talking to as long as whoever is at the other end of the conversation can still play the _role_ `b` expects of him (see Figure 3).
 
 <br/>
 <div align="center">
