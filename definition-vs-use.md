@@ -146,7 +146,8 @@ type S = {
 function fn(s: S) { /* ... */ }
 
 // fn is provided with more information than strictly necessary
-fn({ x: 'string', y: 42, z: false });
+let d = { x: 'string', y: 42, z: false };
+fn(d);
 ```
 
 Finally, notice that a consumer may even specify its requirements in-line<sup id="sup-2"> <a href="#footnote-2">2</a></sup>:
