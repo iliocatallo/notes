@@ -158,7 +158,7 @@ function fn(s: {x: string; y: number }) { /* ... */ }
 
 <!-- https://github.com/matthiasn/talk-transcripts/blob/master/Hickey_Rich/EffectivePrograms-mostly-text.md -->
 <br/>
-<sup id="footnote-2">2. In (Hickey 2017), Rich Hickey insists that aggregates should only be intended as <i>collecting devices</i>. Every time we name an aggregate (as with <code>S</code> above), there is the risk of attaching some semantics to it, effectively giving a name to a concretion. In contrast, in-line requirements focuses on the keys, which really capture semantics. Accordingly, names such as <code>S</code> should only be considered shorthands to avoid cluttering the consumer function signature. <a href="#sup-2">⏎</a></sup>
+<sup id="footnote-2">2. In (Hickey 2017), Rich Hickey insists that aggregates should only be intended as <i>collecting devices</i>. Every time we name an aggregate (as with <code>S</code> above), there is the risk of attaching some semantics to it, effectively giving a name to a concretion. In contrast, in-line requirements focus on the keys, which really capture semantics. Accordingly, names such as <code>S</code> should only be considered shorthands to avoid cluttering the consumer function signature. <a href="#sup-2">⏎</a></sup>
 
 ## Concepts
 
