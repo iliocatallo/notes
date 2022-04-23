@@ -244,7 +244,7 @@ As seen, concepts such as `SemiRegular` result from the analysis of what require
 
 We discussed three particular forms of consumer's expectations. Each time, we were able to make something interchangeable: different objects playing the same role, different aggregates sharing the same keys, different types modeling the same concept. This is abstraction, the act of treating different things as if they were the same.
 
-The presented examples also suggest that useful abstraction originates at the consumer side. When abstraction only appears at the consumer side, objects can casually participate to interactions, free of predetermined roles; multi-sourced, sparse information can be freely recombined for the sake of a specific data processing task; and battle-tested algorithms can be freely reused on application-specific types without the need of explicit mutual knowledge.
+The presented examples also suggest that useful abstraction originates at the consumer side. When abstraction only appears at the consumer side, objects can casually participate to interactions, free of predetermined roles; multi-sourced, sparse information can be freely recombined for the purpose of a specific data processing task; and battle-tested algorithms can be freely reused on application-specific types without the need of explicit mutual knowledge.
 
 This is not possible if the definition anticipates the use.
 
