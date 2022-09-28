@@ -254,7 +254,7 @@ This is not possible if the definition anticipates the use.
 
 - (Freeman & Pryce 2009) S. Freeman and N. Pryce –
 [_Growing Object-Oriented Software, Guided by Tests_](http://www.mockobjects.com/). Addison-Wesley Professional, 2009
-- (Coplien & Bjørnvig 2011) J. Coplien and G. Bjørnvig – [_Lean architecture: for Agile Software Development_](http://www.leansoftwarearchitecture.com/). John Wiley & Sons, 2011
+- (Coplien & Bjørnvig 2011) J. Coplien and G. Bjørnvig – [_Lean Architecture: for Agile Software Development_](http://www.leansoftwarearchitecture.com/). John Wiley & Sons, 2011
 - (Dehnert & Stepanov 1998) J. Dehnert and A. Stepanov – [_Fundamentals of Generic Programming_](http://stepanovpapers.com/DeSt98.pdf). Springer-Verlag, 1998
 - (Metz 2018) S. Metz – [_Practical Object-Oriented Design: An Agile Primer Using Ruby (2nd ed.)_](https://sandimetz.com/products#product-poodr). Addison-Wesley Professional, 2018
 - (Hickey 2017) R. Hickey - [_Effective Programs - 10 Years of Clojure_](https://youtu.be/2V1FtfBDsLU?t=2268). Clojure/Conj, 2017
