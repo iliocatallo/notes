@@ -116,7 +116,7 @@ let b = new B(a)
 <br/>
 <sup id="footnote-1">1. In (Freeman & Pryce 2009), Steve Freeman and Nat Pryce make the case that interfaces are not enough to express roles, as they only convey the shape <i>but not the ordering</i> of the messages involved in a valid interaction. <a href="#sup-1">⏎</a></sup>
 
-<sup id="footnote-2">2. If we are not introducing a class as a way to have its objects pre-determinedly play a certain number of roles, what else should be guiding the class definition? (Coplien & Bjørnvig 2011) proposes that classes should only include pure domain logic, without operations unique to any particular consumer. If we assume that obligations for a role can always be satisfied by composing domain operations, we are free to separate the description of the domain knowledge (the class) from the description of how to combine those operations in order to meet some consumer's need. The latter description might be expressed in a range of language constructs, e.g., Mixins. <a href="#sup-2">⏎</a></sup>
+<sup id="footnote-2">2. If we are not introducing a class as a way to have its objects pre-determinedly play a certain number of roles, what else should be guiding the class definition? (Coplien & Bjørnvig 2011) proposes that classes should only include pure domain logic, without operations unique to any particular consumer. If we assume that obligations for a role can always be satisfied by composing domain operations, we are free to separate the description of the domain operations (the class) from the description of how to combine those operations in order to meet some consumer's need. The latter description might be expressed in a range of language constructs, e.g., Mixins. <a href="#sup-2">⏎</a></sup>
 
 ## Aggregates
 
