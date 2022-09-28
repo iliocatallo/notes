@@ -88,7 +88,7 @@ class A {
 }
 ```
 
-When the consumer's expectations are expressed only at the consumer side, we obtain the following code:
+When the consumer's expectations are expressed only at the consumer side, we obtain the following code<sup id="sup-2"> <a href="#footnote-2">2</a></sup>:
 
 ```typescript
 class B {
@@ -115,6 +115,8 @@ let b = new B(a)
 
 <br/>
 <sup id="footnote-1">1. In (Freeman & Pryce 2009), Steve Freeman and Nat Pryce make the case that interfaces are not enough to express roles, as they only convey the shape <i>but not the ordering</i> of the messages involved in a valid interaction. <a href="#sup-1">⏎</a></sup>
+
+<sup id="footnote-2">2. If we are not introducing a class as a way to have its objects pre-determinedly play a certain number of roles, what else should be guiding the class definition? (Coplien & Bjørnvig 2011) proposes that classes should only include pure domain logic, without operations unique to any particular consumer. If we assume that obligations for a role can always be satisfied by composing domain operations, we are free to separate the description of the domain knowledge (the class) from the description of how to combine those operations in order to meet some consumer's need. The latter description might be expressed in a range of language constructs, e.g., Mixins. <a href="#sup-2">⏎</a></sup>
 
 ## Aggregates
 
@@ -150,7 +152,7 @@ let d = { x: 'string', y: 42, z: false };
 fn(d);
 ```
 
-Finally, notice that a consumer may even specify its requirements in-line<sup id="sup-2"> <a href="#footnote-2">2</a></sup>:
+Finally, notice that a consumer may even specify its requirements in-line<sup id="sup-3"> <a href="#footnote-3">3</a></sup>:
 
 ```typescript
 function fn(s: {x: string; y: number }) { /* ... */ }
@@ -158,11 +160,11 @@ function fn(s: {x: string; y: number }) { /* ... */ }
 
 <!-- https://github.com/matthiasn/talk-transcripts/blob/master/Hickey_Rich/EffectivePrograms-mostly-text.md -->
 <br/>
-<sup id="footnote-2">2. In (Hickey 2017), Rich Hickey insists that aggregates should only be intended as <i>collecting devices</i>. Every time we name an aggregate (as with <code>S</code> above), there is the risk of attaching some semantics to it, effectively giving a name to a concretion. In contrast, in-line requirements focus on the keys, which really capture semantics. Accordingly, names such as <code>S</code> should only be considered shorthands to avoid cluttering the consumer function signature. <a href="#sup-2">⏎</a></sup>
+<sup id="footnote-3">3. In (Hickey 2017), Rich Hickey insists that aggregates should only be intended as <i>collecting devices</i>. Every time we name an aggregate (as with <code>S</code> above), there is the risk of attaching some semantics to it, effectively giving a name to a concretion. In contrast, in-line requirements focus on the keys, which really capture semantics. Accordingly, names such as <code>S</code> should only be considered shorthands to avoid cluttering the consumer function signature. <a href="#sup-3">⏎</a></sup>
 
 ## Concepts
 
-Virtually all programming languages provide a set of standard algorithmic components, such as `sort`, `find` and the like. Among those, we recognize `swap` as the elementary algorithmic component<sup id="sup-3"> <a href="#footnote-3">3</a></sup>. The following C++ code illustrates its use:
+Virtually all programming languages provide a set of standard algorithmic components, such as `sort`, `find` and the like. Among those, we recognize `swap` as the elementary algorithmic component<sup id="sup-4"> <a href="#footnote-4">4</a></sup>. The following C++ code illustrates its use:
 
 ```cpp
 int main() {
@@ -204,7 +206,7 @@ using IsSemiRegular = std::bool_constant<std::is_default_constructible<T>::value
                                          std::is_destructible<T>::value>;
 ```
 
-Past the intricated syntax, we see that `IsSemiRegular` holds true for some `T` only if `T` turns out to be both default-constructible<sup id="sup-4"> <a href="#footnote-4">4</a></sup>, copy-constructible, copy-assignable and destructible.
+Past the intricated syntax, we see that `IsSemiRegular` holds true for some `T` only if `T` turns out to be both default-constructible<sup id="sup-5"> <a href="#footnote-5">5</a></sup>, copy-constructible, copy-assignable and destructible.
 
 At this point, we are ready to reflect this new understanding in our definition of `swap`:
 
@@ -236,9 +238,9 @@ int main() {
 As seen, concepts such as `SemiRegular` result from the analysis of what requirements should hold for an algorithm to work; therefore, they are a direct expression of the consumer's expectations. In other words, the requirements of a type come from where you use the type, not from the type itself (Parent 2017).
 
 <br/>
-<sup id="footnote-3">3. In that <code>swap</code> is the first useful operation for the construction of more sophisticated algorithms, most notably <code>sort</code>. <a href="#sup-3">⏎</a></sup>
+<sup id="footnote-4">4. In that <code>swap</code> is the first useful operation for the construction of more sophisticated algorithms, most notably <code>sort</code>. <a href="#sup-4">⏎</a></sup>
 
-<sup id="footnote-4">4. The careful reader may notice that the need for a default constructor was never mentioned in our analysis of <code>swap</code>. Even so, we need to preserve the relationship between assignment and copy-construction, i.e., copy (<code>T a = b</code>) and assignment (<code>T a; a = b</code>) must be interchangeable. This requires <code>T</code> to support default-construction. <a href="#sup-4">⏎</a></sup>
+<sup id="footnote-5">5. The careful reader may notice that the need for a default constructor was never mentioned in our analysis of <code>swap</code>. Even so, we need to preserve the relationship between assignment and copy-construction, i.e., copy (<code>T a = b</code>) and assignment (<code>T a; a = b</code>) must be interchangeable. This requires <code>T</code> to support default-construction. <a href="#sup-5">⏎</a></sup>
 
 ## Final Remarks
 
@@ -252,6 +254,7 @@ This is not possible if the definition anticipates the use.
 
 - (Freeman & Pryce 2009) S. Freeman and N. Pryce –
 [_Growing Object-Oriented Software, Guided by Tests_](http://www.mockobjects.com/). Addison-Wesley Professional, 2009
+- (Coplien & Bjørnvig 2011) J. Coplien and G. Bjørnvig – [Lean architecture: for Agile Software Development](http://www.leansoftwarearchitecture.com/). John Wiley & Sons, 2011
 - (Dehnert & Stepanov 1998) J. Dehnert and A. Stepanov – [_Fundamentals of Generic Programming_](http://stepanovpapers.com/DeSt98.pdf). Springer-Verlag, 1998
 - (Metz 2018) S. Metz – [_Practical Object-Oriented Design: An Agile Primer Using Ruby (2nd ed.)_](https://sandimetz.com/products#product-poodr). Addison-Wesley Professional, 2018
 - (Hickey 2017) R. Hickey - [_Effective Programs - 10 Years of Clojure_](https://youtu.be/2V1FtfBDsLU?t=2268). Clojure/Conj, 2017
