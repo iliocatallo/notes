@@ -206,7 +206,7 @@ using IsSemiRegular = std::bool_constant<std::is_default_constructible<T>::value
                                          std::is_destructible<T>::value>;
 ```
 
-Past the intricated syntax, we see that `IsSemiRegular` holds true for some `T` only if `T` turns out to be both default-constructible<sup id="sup-5"> <a href="#footnote-5">5</a></sup>, copy-constructible, copy-assignable and destructible.
+Past the intricate syntax, we see that `IsSemiRegular` holds true for some `T` only if `T` turns out to be both default-constructible<sup id="sup-5"> <a href="#footnote-5">5</a></sup>, copy-constructible, copy-assignable and destructible.
 
 At this point, we are ready to reflect this new understanding in our definition of `swap`:
 
